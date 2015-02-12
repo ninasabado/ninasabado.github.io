@@ -1,1 +1,107 @@
-Hello World
+<!DOCTYPE html>
+
+<!-- Code written by Nina Sabado -- >
+
+<html>
+	<head>
+		<title>Intro to JS</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<style type="text/css">
+			
+			/* Style options for the button */
+			body{
+				background-color: white;
+			}
+			button {
+				color: green;
+				background-color: #FFFFCC;
+			}
+			button:hover {
+				color: blue;
+				background-color: white;
+
+			}
+			.emphasis {
+				color: green;
+			}
+			div{
+				width: 30%;
+			}
+			ul{
+				border-width: 1;
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="container">
+			
+			<button id="dayb">Day</button>
+			<button id ="nightb">Night</button>
+			
+			<h1 id="day" style = "color: white">
+				<p><b>THE STATEMENT BELOW IS TRUE</b></p>
+				<p>PS. Also it's Night</p>
+			</h1>
+
+			<img src="http://top1walls.com/thumbs/people/moon-black-background-1714621-480x320.jpg" id="moon">
+			
+			<h1 id="night" style = "color: black">
+				<p><b>THE STATEMENT ABOVE IS FALSE</b></p>
+				<p>PS. Also it's Day</p>
+			</h1>
+
+			<img src="http://images.all-free-download.com/images/graphiclarge/decorative_sun_clip_art_23259.jpg" id = "sun">
+
+		</div>
+
+		
+	</body>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		$('#day').hide();
+		$('#moon').hide();
+		
+		// How to define a function yay
+		function makeDay(){
+			$('body').css('background-color', 'white');
+			$('#night').show();
+			$('#sun').show();
+			$('#moon').hide();
+			$('#day').hide();
+		}
+
+		function makeNight(){
+			$('body').css('background-color', 'black');
+			$('#sun').hide();
+			$('#night').hide();
+			$('#moon').show();
+			$('#day').show();
+		}
+
+		$('#dayb').on('click', function(){
+			makeDay();
+		})
+
+		$('#nightb').on('click', function(){
+			makeNight();
+		})
+/*
+		 $('div').on('click', function(){
+			$('button').show();
+			alert('Found it! Don\'t be so stupid next time');
+		})*/
+
+	</script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</html>
